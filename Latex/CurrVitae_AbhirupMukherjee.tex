@@ -1,0 +1,370 @@
+% !TEX program = xelatex
+\documentclass[11pt, letterpaper]{article}
+\newcommand{\name}{Abhirup Mukherjee}
+\newcommand{\foc}[1]{\textbf{\textit{#1}}}
+\newcommand{\affil}{{\bf \it \large Ph.D. Student}, Department of Physical Sciences,\\ Indian Institute of Science Education and Research (IISER) Kolkata, Mohanpur, West Bengal 74126, India}
+\newcommand{\sect}[1]{\section{\textsc{#1}}}
+\renewcommand{\labelitemi}{\color{primaryColor}$\blacksquare$}
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=1 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=1.5 cm, % seperation between body and page edge from the left
+    right=1.5 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{44, 62, 120} % define primary color
+\definecolor{secondColor}{RGB}{144, 0, 32} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath,amssymb} % for math
+\usepackage[
+    pdftitle={\name's CV},
+    pdfauthor={\name},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{fontspec}
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+\setmainfont{Linux Libertine}
+\setsansfont{Linux Libertine}
+
+% \usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small \name - Page \thepage{} of \pageref*{LastPage}}\hfill\small\color{gray}\textit{Last updated: \today}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 5.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+% \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+%   \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+%     \put(
+%         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+%         \LenToUnit{\paperheight-1.0 cm}
+%     ){\vtop{{\null}\makebox[0pt][c]{
+%         \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+%     }}}%
+%   }%
+% }%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    % \placelastupdatedtext
+    \begin{header}
+		{\bf \LARGE \color{primaryColor} \textsc{\name}}
+
+        \vspace{0.3 cm}
+        \fontsize{9 pt}{10 pt}
+        \affil
+
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:am18ip014@iiserkol.ac.in}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}am18ip014@iiserkol.ac.in}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{http://arxiv.org/a/mukherjee_a_9}{{\footnotesize\faLayerGroup}\hspace*{0.13cm}arXiv}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://scholar.google.com/citations?user=4IByBo8AAAAJ}{{\footnotesize\faGoogle}\hspace*{0.13cm}Scholar}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://abhirup-m.github.io/}{{\footnotesize\faLink}\hspace*{0.13cm}Website}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/abhirup-m}{{\footnotesize\faGithub}\hspace*{0.13cm}Github}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{{\footnotesize\faPhone*}\hspace*{0.13cm}(+91) 7595-914-112}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+	\sect{Research Experience}
+
+        \begin{onecolentry}
+            \href{https://rendercv.com}{RenderCV} is a LaTeX-based CV/resume version-control and maintenance app. It allows you to create a high-quality CV or resume as a PDF file from a YAML file, with \textbf{Markdown syntax support} and \textbf{complete control over the LaTeX code}.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+		Jump to \textcolor{primaryColor}{Publications and Preprints}.
+        \end{onecolentry}
+
+    \sect{Education}
+        \begin{threecolentry}{\textbf{BS}}{
+            Sept 2000 – May 2005
+        }
+            \textbf{University of Pennsylvania}, Computer Science
+            \begin{highlights}
+                \item GPA: 3.9/4.0 (\href{https://example.com}{a link to somewhere})
+                \item \textbf{Coursework:} Computer Architecture, Comparison of Learning Algorithms, Computational Theory
+            \end{highlights}
+        \end{threecolentry}
+
+	\sect{Ongoing Projects}
+	\begin{itemize}
+		\item Project 1
+		\item Project 2
+	\end{itemize}
+	
+    \sect{Technical Skills}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+		\item Field theory-based techniques (unitary renormalisation group method) and \foc{low-energy Hamiltonian} methods
+		\item Numerical evaluation of two-point and multi-point \foc{correlation functions and entanglement measures} in fermionic systems
+		\item \foc{Julia and Python} for numerical computation
+		\end{highlightsforbulletentries}
+	\end{onecolentry}
+
+
+	\sect{Talks and Poster Presentations}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+		\item Poster at 7th Annual Conference on Quantum Condensed Matter (QMAT) - December 2024, IIT Guwahati
+		\item Poster at Young Investigators Meet on Quantum Condensed Matter Theory (YIMQMCT) - December 2023, IISER Bhopal
+		\item Poster at Conference on Emergent phenomena in Quantum MATerials (E-QMAT) - October 2022, IIT Roorkee
+		\item Talk on \foc{Insights On The Pseudogap In 2D From An Impurity Model} at DPS Day, Department of Physical Sciences - June 2025, IISER Kolkata
+		\item Talk on \foc{Kondo Effect and Its Breakdown: Interplay of Fluctuations in Zero Dimensions} at PP65: Physics Trends @ IISER Kolkata - June 2023, IISER Kolkata
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+    
+    \sect{Teaching Experience}
+
+	{\bf Teaching Assistantship at IISER Kolkata}
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+
+		\item Condensed Matter Physics II (2022). Instructor: Prof. Siddhartha Lal
+		\item Quantum Mechanics. (2023) Instructor: Prof. Siddhartha Lal
+		\item Computational Physics (2024). Instructor: Prof. Rangeet Bhattacharyya
+
+
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+
+    \sect{Awards and Honours}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+
+		\item Qualified \foc{CSIR-UGC NET} with national rank 59 (Dec 2018)
+		\item Gold medallist, National Graduate Physics Examination (\foc{NGPE}) - 2018
+		\item Silver medallist, \foc{B.Sc. (Hons.)}, Ramakrishna Mission Vidyamandira (2015-2018)
+
+
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+
+
+    \sect{Publications and Preprints}
+
+            \begin{twocolentry}{
+                July 2025\\
+				\hrefWithoutArrow{https://arxiv.org/abs/2507.17201}{\bf arXiv:2507.17201}
+            }
+			\textbf{Mott Criticality as the Confinement Transition of a Pseudogap-Mott Metal}\\[1pt]
+			\mbox{\textit{Abhirup Mukherjee}}, \mbox{S. R. Hassan}, \mbox{Anamitra Mukherjee}, \mbox{N. S. Vidhyadhiraja}, \mbox{A. Taraphder}, \mbox{Siddhartha Lal}
+            \end{twocolentry}
+			\vspace{1em}
+
+            \begin{twocolentry}{
+                April 2025\\
+				\hrefWithoutArrow{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.111.L140414}{\bf Phys. Rev. B 111, L140414}
+            }
+			\textbf{Revealing the magnetic dimensional crossover in the Heisenberg ferromagnet CrSiTe3 through picosecond strain pulses}\\[1pt]
+			\mbox{Anjan Kumar N M}, \mbox{Soumya Mukherjee}, \mbox{\it Abhirup Mukherjee}, \mbox{Ajinkya Punjal}, \mbox{Shubham Purwar}, \mbox{Thirupathaiah Setti3, Shriganesh Prabhu S.}, \mbox{Siddhartha Lal}, \mbox{N. Kamaraju}
+            \end{twocolentry}
+			\vspace{1em}
+
+            \begin{twocolentry}{
+                 June 2024\\
+				\hrefWithoutArrow{https://iopscience.iop.org/article/10.1088/1751-8121/ad56e1/meta}{\bf J. Phys. A: Math. Theor. 57 275401}
+            }
+			\textbf{Holographic entanglement renormalisation for fermionic quantum matter}\\[1pt]
+			\mbox{\textit{Abhirup Mukherjee}}, \mbox{Siddhartha Patra}, \mbox{Siddhartha Lal}
+            \end{twocolentry}
+			\vspace{1em}
+
+            \begin{twocolentry}{
+                 November 2023\\
+				\hrefWithoutArrow{https://iopscience.iop.org/article/10.1088/1367-2630/ad08f3/meta}{\bf New J. Phys. 25 113011}
+            }
+			\textbf{Kondo frustration via charge fluctuations: a route to Mott localisation}\\[1pt]
+			\mbox{\textit{Abhirup Mukherjee}}, \mbox{NS Vidhyadhiraja}, \mbox{A Taraphder}, \mbox{Siddhartha Lal}
+            \end{twocolentry}
+			\vspace{1em}
+
+            \begin{twocolentry}{
+                May 2023\\
+				\hrefWithoutArrow{https://iopscience.iop.org/article/10.1088/1361-648X/acd09c/meta}{\bf  J. Phys.: Condens. Matter 35 315601}
+            }
+			\textbf{Frustration shapes multi-channel Kondo physics: a star graph perspective}\\[1pt]
+			\mbox{Siddhartha Patra}, \mbox{\textit{Abhirup Mukherjee}}, \mbox{Anirban Mukherjee}, \mbox{NS Vidhyadhiraja}, \mbox{A Taraphder}, \mbox{Siddhartha Lal}
+            \end{twocolentry}
+			\vspace{1em}
+
+            \begin{twocolentry}{
+                February 2022\\
+				\hrefWithoutArrow{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.105.085119}{\bf Phys. Rev. B 105, 085119}
+            }
+			\textbf{Unveiling the Kondo cloud: Unitary renormalization-group study of the Kondo model}\\[1pt]
+			\mbox{Anirban Mukherjee}, \mbox{\textit{Abhirup Mukherjee}}, \mbox{NS Vidhyadhiraja}, \mbox{A Taraphder}, \mbox{Siddhartha Lal}
+            \end{twocolentry}
+
+
+    \sect{References}
+
+	\begin{minipage}{0.5\textwidth}
+		{\bf \large Prof. Siddhartha Lal} (Ph.D. advisor)\\
+	    Professor,\\
+	    Department of Physical Sciences,\\
+		{\it Indian Institute of Science Education and Research Kolkata, India},\\
+		\faEnvelope[solid]~slal@iiserkol.ac.in
+
+	\end{minipage}
+	
+
+\end{document}
