@@ -1,0 +1,77 @@
+name: Abhirup Mukherjee
+position: Doctoral Researcher
+affiliation: "Department of Physical Sciences, Indian Institute of Science Education and Research Kolkata, India"
+education:
+  - institute: "Indian Institute of Science Education and Research (_IISER_) Kolkata, India"
+    time: "2018 - ongoing"
+    degree: "M.Sc. + Ph.D. in Physics"
+    info: "CGPA: 9.61"
+  - institute: "Ramakrishna Mission Vidyamandira (Autonomous), University of Calcutta, India"
+    time: "2015 - 2018"
+    degree: "B.Sc. in Physics (Hons.)"
+    info: "CGPA: 9.22"
+research:
+  - title: "Doctoral Research"
+    institute: "Indian Institute of Science Education and Research Kolkata, India"
+    advisor: "Prof. Siddhartha Lal"
+    time: "2021 - ongoing"
+    info: "Study of Mott transitions and non-Fermi liquids through Kondo breakdown"
+  - title: "M.Sc. Thesis"
+    institute: "Indian Institute of Science Education and Research Kolkata, India"
+    advisor: "Prof. Siddhartha Lal"
+    time: "2020 - 2021"
+    info: "Unitary renormalisation group study of an extended Anderson impurity model"
+  - title: "B.Sc. Final Year Project"
+    institute: "Ramakrishna Mission Vidyamandira, India"
+    advisor: "Prof. Pushpajit Halder"
+    time: "2018"
+    info: "The EPR paradox: Entangled states"
+ongoing:
+  - title: "Punctured-Chern invariant at IQHE plateau-to-plateau transitions: A unitary RG study"
+    people: 
+      - Abhirup Mukherjee
+      - Sumiran Pujari
+      - Siddhartha Lal
+  - title: "Some universal features of Kondo breakdown: Insights into Mott criticality"
+    people: 
+      - Debraj Debata
+      - Abhirup Mukherjee
+      - Siddhartha Lal
+  - title: "Kondo breakdown as a measurement-driven entanglement transition"
+    people: 
+      - Debraj Debata
+      - Abhirup Mukherjee
+      - Siddhartha Lal
+  - title: "Quantum criticality in a three-orbital impurity model"
+    people: 
+      - Debraj Debata*
+      - Aashish Kumar*
+      - Abhirup Mukherjee
+      - Siddhartha Lal
+skills:
+  - "Field theory-based techniques (unitary renormalisation group method) and _low-energy Hamiltonian_ methods"
+  - "Computation of two-point and multi-point _correlation functions and entanglement measures_ in fermionic systems"
+  - "_Julia_ and Python for numerical computation"
+presentations:
+  - "Poster: 7th Annual Conference on Quantum Condensed Matter \\u{2014} December 2024, IIT Guwahati"
+  - "Poster: Young Investigators Meet on Quantum Condensed Matter Theory \\u{2014} December 2023, IISER Bhopal"
+  - "Poster: Conference on Emergent phenomena in Quantum MATerials \\u{2014} October 2022, IIT Roorkee"
+  - "Talk on _Insights On The Pseudogap In 2D From An Impurity Model_ at DPS Day, Department of Physical Sciences \\u{2014} June 2025, IISER Kolkata"
+  - "Talk on _Kondo Effect and Its Breakdown: Interplay of Fluctuations in Zero Dimensions_ at PP65: Physics Trends at IISER Kolkata \\u{2014} June 2023, IISER Kolkata"
+taship:
+  - "Condensed Matter Physics II (2022). Instructor: Prof. Siddhartha Lal"
+  - "Quantum Mechanics. (2023) Instructor: Prof. Siddhartha Lal"
+  - "Computational Physics (2024). Instructor: Prof. Rangeet Bhattacharyya"
+honours:
+  - "Qualified _CSIR-UGC NET_ with All India Rank (AIR) 59 (Dec 2018)"
+  - "Gold medallist, National Graduate Physics Examination (_NGPE_) - 2018"
+  - "Qualified _JAM_ (AIR 10) and _JEST_ (AIR 21) \\u{2014} national-level entrance exams for M.Sc/Ph.D. in India"
+  - "Silver medallist, _B.Sc. (Hons.)_, Ramakrishna Mission Vidyamandira, University of Calcutta, (2015-2018)"
+contacts:
+  location: West Bengal, India
+  email: am18ip014@iiserkol.ac.in
+  arxiv: http://arxiv.org/a/mukherjee_a_9
+  gscholar: https://scholar.google.com/citations?user=4IByBo8AAAAJ
+  website: https://abhirup-m.github.io/
+  github: https://github.com/abhirup-m
+  phone: (+91) 7595-914-112
