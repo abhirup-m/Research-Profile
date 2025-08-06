@@ -1,6 +1,5 @@
 #import "@preview/fontawesome:0.6.0": *
-#import "settings.typ": *
-#include "settings.typ"
+#import "currVitae.typ": *
 #let details = yaml("details.yml")
 #let references = yaml("references.yml")
 #let papers = yaml("papers.yml")
@@ -30,12 +29,12 @@ stack(
 ]
 
 #section("Publications and Preprints")
-#for p in papers {
+#for (k, paper) in papers.pairs() {
   twoCol(
-    p.title,
-    authorise(p.authors),
-    p.time,
-    href(if p.journal != none { p.journal } else { p.arxiv }, foc(p.display))
+    paper.title,
+    authorise(paper.author),
+    dateForm(paper.date),
+    href(paper.url, foc(paper.display))
   )
 }
 

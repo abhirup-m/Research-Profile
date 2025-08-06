@@ -23,11 +23,12 @@
 #let foc(t) = text(weight: "bold", fill: primCol, t)
 #let authorise(authors) = {
   let authorList = []
-  for (i, a) in authors.enumerate() {
-    if a == "Abhirup Mukherjee" {
-      authorList = authorList + emph(a)
+  for (i, revAuthor) in authors.enumerate() {
+    let author = revAuthor.split(", ").rev().join(" ")
+    if author == "Abhirup Mukherjee" {
+      authorList = authorList + emph(author)
     } else {
-      authorList = authorList + a
+      authorList = authorList + author
     }
     if i < authors.len() - 1 {
       authorList = authorList + ", "
@@ -70,4 +71,9 @@
   )
   set text(size: 11pt)
   doc
+}
+
+#let dateForm(date) = {
+  let months = ("January","February","March","April","May","June","July", "August","September","October","November","December")
+  return months.at(int(str(date).split("-").at(1))-1) + "  " + str(date).split("-").at(0)
 }
