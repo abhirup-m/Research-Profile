@@ -77,7 +77,7 @@ stack(
 }
 #grid(
   columns: (1fr, 1fr),
-  column-gutter: 1em,
+  column-gutter: 0.5em,
   row-gutter: 2em,
   rows: (auto, auto),
   ..refs,

@@ -4,3 +4,33 @@
   department: "Department of Physical Sciences"
   institute: "IISER Kolkata, India"
   email: slal@iiserkol.ac.in
+- name: Dr. Kamaraju Natarajan
+  info:
+  position: Associate Professor
+  department: "Department of Physical Sciences"
+  institute: "IISER Kolkata, India"
+  email: nkamaraju@iiserkol.ac.in 
+- name: Prof. Syed R Hassan
+  info:
+  position: Professor
+  department:
+  institute: "The Institute of Mathematical Sciences, India"
+  email: shassan@imsc.res.in
+- name: Dr. Anamitra Mukherjee
+  info:
+  position: Associate Professor
+  department: "School of Physical Sciences"
+  institute: "National Institute of Science, Education and Research, India"
+  email: anamitra@niser.ac.in
+- name: Prof. Vidhyadhiraja N S
+  info:
+  position: Professor
+  department: "Theoretical Sciences Unit"
+  institute: "Jawaharlal Nehru Center for Advanced Scientific Research, India"
+  email: raja@jncasr.ac.in
+- name: Prof. A Taraphder
+  info:
+  position: Professor
+  department: "Department of Physics"
+  institute: "Indian Institute of Technology Kharagpur, India"
+  email: arghya@phy.iitkgp.ac.in
