@@ -51,7 +51,8 @@ ongoing:
 skills:
   - "Field theory-based techniques (unitary renormalisation group method) and _low-energy Hamiltonian_ methods"
   - "Computation of two-point and multi-point _correlation functions and entanglement measures_ in fermionic systems"
-  - "_Julia_ and Python for numerical computation"
+  - "Numerical computation of dynamical correlations (spectral function, self-energy, etc) using exact diagonalisation"
+  - "Julia and python for numerical computation"
 presentations:
   - "Poster: 7th Annual Conference on Quantum Condensed Matter \\u{2014} December 2024, IIT Guwahati"
   - "Poster: Young Investigators Meet on Quantum Condensed Matter Theory \\u{2014} December 2023, IISER Bhopal"

@@ -38,6 +38,26 @@ Anjan2025:
     issue: 14
     volume: 111
   display: "Phys. Rev. B 111, L140414"
+Debata2024:
+  type: article
+  title: Kondo breakdown as a measurement-driven entanglement transition
+  author:
+  - Debata, Debraj
+  - Mukherjee, Abhirup
+  - Lal, Siddhartha
+  date: 2024
+  display: "In preparation"
+Aashish2024:
+  type: article
+  title: Quantum Critical Mott Transitions in a Three-Orbital Model System
+  author:
+  - Debata*, Debraj
+  - Kumar*, Aashish
+  - Mukherjee, Abhirup
+  - Vidhyadhiraja, N S
+  - Lal, Siddhartha
+  date: 2024
+  display: "In preparation"
 Mukherjee2024:
   type: article
   title: Holographic entanglement renormalisation for fermionic quantum matter

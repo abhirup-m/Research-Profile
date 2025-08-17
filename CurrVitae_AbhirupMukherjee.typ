@@ -30,12 +30,14 @@ stack(
 
 #section("Publications and Preprints")
 #for (k, paper) in papers.pairs() {
-  twoCol(
-    paper.title,
-    authorise(paper.author),
-    dateForm(paper.date),
-    href(paper.url, foc(paper.display))
-  )
+  if paper.keys().contains("url") {
+    twoCol(
+      paper.title,
+      authorise(paper.author),
+      dateForm(paper.date),
+      if paper.keys().contains("url") { href(paper.url, foc(paper.display)) } else {foc(paper.display)}
+    )
+  }
 }
 
 #section("Ongoing Projects")

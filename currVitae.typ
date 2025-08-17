@@ -23,11 +23,17 @@
 #let foc(t) = text(weight: "bold", fill: primCol, t)
 #let authorise(authors) = {
   let authorList = []
-  for (i, revAuthor) in authors.enumerate() {
-    let author = revAuthor.split(", ").rev().join(" ")
+  for (i, a) in authors.enumerate() {
+    let author = a
+    if a.contains(", ") {
+      author = a.split(", ").rev().join(" ")
+    }
     if author == "Abhirup Mukherjee" {
-      authorList = authorList + emph(author)
+      authorList = authorList + text(weight: "semibold", author)
     } else {
+      author = author.split(" ")
+      author.at(0) = author.at(0).at(0)
+      author = author.join(" ")
       authorList = authorList + author
     }
     if i < authors.len() - 1 {
@@ -36,6 +42,7 @@
   }
   return authorList
 }
+
 #let slist(..i) = list(marker: square-marker(size: 0.7em), ..i)
 #let title(t) = align(center, par(spacing: 0em, text(size: title-size, weight: "semibold", fill: primCol, smallcaps(t))))
 #let reference(ref) = {
@@ -75,5 +82,9 @@
 
 #let dateForm(date) = {
   let months = ("January","February","March","April","May","June","July", "August","September","October","November","December")
-  return months.at(int(str(date).split("-").at(1))-1) + "  " + str(date).split("-").at(0)
+  if str(date).split("-").len() == 2 {
+    return months.at(int(str(date).split("-").at(1))-1) + "  " + str(date).split("-").at(0)
+  } else {
+    return str(date).split("-").at(0)
+  }
 }
