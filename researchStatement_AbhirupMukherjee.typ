@@ -1,4 +1,3 @@
-#import "@preview/muchpdf:0.1.1":*
 #set page(
   paper: "us-letter",
   margin: (top: 1.5cm, bottom: 1cm, rest: 1.5cm),
