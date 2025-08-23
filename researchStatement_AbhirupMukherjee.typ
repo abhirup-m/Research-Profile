@@ -1,63 +1,14 @@
-#set page(
-  paper: "us-letter",
-  margin: (top: 1.5cm, bottom: 1cm, rest: 1.5cm),
+#import "settings.typ": *
+
+#show: style.with(
 )
 
-#let papers = yaml("papers.yml")
-#let authorise(authors) = {
-  let authorList = []
-  for (i, a) in authors.enumerate() {
-    let author = a
-    if a.contains(", ") {
-      author = a.split(", ").rev().join(" ")
-    }
-    if author == "Abhirup Mukherjee" {
-      authorList = authorList + text(weight: "semibold", author)
-    } else {
-      author = author.split(" ")
-      author.at(0) = author.at(0).at(0)
-      author = author.join(" ")
-      authorList = authorList + author
-    }
-    if i < authors.len() - 1 {
-      authorList = authorList + ", "
-    }
-  }
-  return authorList
-}
+#cvTitle(details.name, "Research Statement")
+// #text(size: title-size, font: fontBig, text(fill: colName, weight: "semibold", [Abhirup Mukherjee]) + text(weight: "bold", [~~|~~]) + [#text(weight: "bold", fill: colSub, [Research]) Statement])
 
-#let fontBig = "Bitter"
-#let fontMain = "Barlow"
-
-#let colMain = rgb("1F1F1F")
-#let colBold = rgb("3F3F3F")
-#let colName = rgb("#CC5500")
-#let colSec = rgb("#135873")
-#let colSub = rgb("#708090")
-#let colAcc = rgb("FF4433")
-
-#set par(justify: true, first-line-indent: 2em)
-#set text(font:fontMain, fill: colMain, size: 8.5pt, weight: 550)
-#set strong(delta: 150)
-#show strong: it => {
-  text(fill: colBold, weight: "bold", it.body)
-}
-#show heading.where(level:1): set block(below: 1em)
-#show heading.where(level:1): set text(fill: colSec, weight: "bold", font: fontMain)
-#show heading.where(level:2): set text(fill: colSub, weight: "bold", font: fontMain)
-#show math.equation: set text(weight: "bold")
-#set list(marker: square(width: 0.6em, fill: rgb("3f3f3f")))
-#show link: set text(fill: colAcc)
-#text(size: 2em, text(fill: colName, font: fontBig, weight: "semibold", [Abhirup Mukherjee]) + text(weight: "bold", [~~|~~]) + [#text(weight: "bold", fill: colSub, [Research]) Statement])
-
-#columns(2, 
-[
   I am a quantum condensed matter theorist focusing primarily on strongly correlated *quantum matter* - novel phases that appear at zero temperature and display emergent exotic properties, often driven by strong interactions between the constituent particles. Such phases are interesting because they cannot be organised according to the paradigm of spontaneous symmetry breaking and local order parameters. Instead, phase transitions involving such phases often involve changes in *topology*.
-  #colbreak()
 
   My work presently focuses on understanding various features of Mott metal-insulator transitions from the perspective of *Kondo breakdown*. Impurity models involving destruction of Kondo screening often display quantum criticality, non-Fermi liquid physics and pseudogapped phases. This has allowed us to propose simple impurity models that are able to capture and understand crucial features of Mott transitions. More generally, I am interested in studying various models of interacting electrons with the goal of characterising various phases and the intervening phase transitions.
-]
-)
 
 = Kondo breakdown as a route to understanding Mott transitions [@Mukherjee2023, @mukherjee2025]
 
@@ -136,7 +87,7 @@ We were able to show ([@Aashish2024]) that a single $f-$impurity hybridising wit
   )
 )
 
-= Revealing magnetic dimensional crossover in CrSiTe$#sub[3]$ through picosecond strain pulses [@Anjan2025]
+= Magnetic dimensional crossover in CrSiTe$#sub[3]$ through picosecond strain pulses [@Anjan2025]
 #block(height: 22em,
 columns(2,
 [
