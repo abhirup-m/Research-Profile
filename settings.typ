@@ -14,26 +14,18 @@
 #let papers = yaml("papers.yml")
 #let details = yaml("details.yml")
 #let references = yaml("references.yml")
-#let authorise(authors) = {
-  let authorList = []
-  for (i, a) in authors.enumerate() {
-    let author = a
-    if a.contains(", ") {
-      author = a.split(", ").rev().join(" ")
-    }
-    if author == "Abhirup Mukherjee" {
-      authorList = authorList + text(weight: "semibold", author)
-    } else {
-      author = author.split(" ")
-      author.at(0) = author.at(0).at(0)
-      author = author.join(" ")
-      authorList = authorList + author
-    }
-    if i < authors.len() - 1 {
-      authorList = authorList + ", "
-    }
-  }
-  return authorList
+
+#let header(details) = {
+  stack(
+    dir: ltr,
+    spacing: 1fr,
+    [#fa-location-dot()#h(0.4em)#details.contacts.location],
+    [#fa-envelope()#h(0.4em)#details.contacts.email],
+    link(details.contacts.arxiv, [#fa-layer-group()#h(0.4em)arXiv]),
+    link(details.contacts.gscholar, [#fa-google()#h(0.4em)Scholar]),
+    link(details.contacts.website, [#fa-link()#h(0.4em)Website]),
+    [#fa-phone()#h(0.4em)#details.contacts.phone],
+  )
 }
 
 #let cvSection(t) = grid(
@@ -59,7 +51,7 @@
       author = a.split(", ").rev().join(" ")
     }
     if author == "Abhirup Mukherjee" {
-      authorList = authorList + text(weight: "semibold", author)
+      authorList = authorList + text(weight: "bold", fill: colName, author)
     } else {
       author = author.split(" ")
       author.at(0) = author.at(0).at(0)
@@ -88,7 +80,7 @@
     dir: ttb,
     spacing: 0.5em,
     text(weight: "semibold", size: imp-size, ref.name) + if ref.info != none { [#h(0.5em) (#emph(ref.info))] },
-    ref.department + ", " + eval(ref.institute, mode: "markup"),
+    if ref.department != none { ref.department + ", "} + eval(ref.institute, mode: "markup"),
     emph(ref.email)
   )
 }
@@ -115,15 +107,16 @@
 
 
 #let style(
-  base-size: 8.5pt,
+  base-size: 11pt,
+  numCols: 1,
   doc
 ) = [
   #set page(
     paper: "us-letter",
-    margin: (top: 1.5cm, bottom: 1cm, rest: 1.5cm),
+    margin: (top: 1.2cm, bottom: 1cm, rest: 1.2cm),
   )
 
-  #set par(justify: true, first-line-indent: 2em)
+  #set par(justify: true, first-line-indent: 2em, leading: 0.6em)
   #set text(font:fontMain, fill: colMain, size: base-size, weight: 500)
   #set strong(delta: 150)
   #show strong: it => {
@@ -132,9 +125,12 @@
   #show heading.where(level:1): set block(below: 1em)
   #show heading.where(level:1): set text(fill: colSec, weight: "bold", font: fontBig)
   #show heading.where(level:2): set text(fill: colSub, weight: "bold", font: fontBig)
-  #show math.equation: set text(weight: "bold")
+  #show math.equation: set text(font: "Fira Math", weight: "regular")
   #set list(marker: square(width: 0.6em, fill: rgb("3f3f3f")))
   #show link: it => { foc(it) }
   
-  #doc
+  #columns(
+    numCols,
+    doc
+  )
 ]
