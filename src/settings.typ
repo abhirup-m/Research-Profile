@@ -15,6 +15,17 @@
 #let details = yaml("details.yml")
 #let references = yaml("references.yml")
 
+#let paperLinks(papers) = {
+  let items = (:)
+  for (k, v) in papers.pairs() {
+    if v.keys().contains("url") {
+      items.insert(k, link(v.url)[#v.display])
+    }
+  }
+  return items
+}
+
+
 #let header(details) = {
   stack(
     dir: ltr,
