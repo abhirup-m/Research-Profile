@@ -6,6 +6,7 @@ My doctoral research work spans a number of themes, more details of which can be
 
 - *Entanglement renormalisation in solvable models*: Showed how renormalisation via entanglement scaling in a free fermion system (with or without a mass gap) leads to the emergence of a *holographic dimension*, serving as a constructive demonstration of the holographic principle in a simple model [#papers.Mukherjee2024].
 
+#colbreak()
 - *Phenomenological modelling of magnetic dimensional crossover*: In collaboration with an experimental group, we came up with a simple model of phonons interacting with lattice spin fluctuations that explains various experimental features of a two-step *magnetic dimensional crossover* observed in CrSiTe$#sub[3]$ [#papers.Anjan2025].
 
 I am working on a number of other projects which I plan to finish before joining for a postdoc:

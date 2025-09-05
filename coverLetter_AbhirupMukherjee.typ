@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/coverLettBURKELFTP.typ": *
+#import "coverLetterTexts/coverLettGeneral.typ": *
 
 #show: style.with(
   numCols: 2,

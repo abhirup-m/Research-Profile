@@ -15,6 +15,13 @@
 #let details = yaml("details.yml")
 #let references = yaml("references.yml")
 
+#let balance(content, offset: 9pt) = layout(size => {
+  let count = content.at("count")
+  let textheight = measure(content, width: size.width).height / count
+  let height = measure(content, height: textheight + offset, width: size.width).height
+  block(height: height, content)
+})
+
 #let paperLinks(papers) = {
   let items = (:)
   for (k, v) in papers.pairs() {
@@ -27,6 +34,7 @@
 
 
 #let header(details) = {
+  set text(size: 11pt)
   stack(
     dir: ltr,
     spacing: 1fr,
@@ -76,14 +84,19 @@
   return authorList
 }
 
-#let cvTitle(t1, t2) = {
+#let cvTitle(t1, t2, split: true) = {
   set text(font: fontBig, size: title-size, weight: "bold")
   grid(
     columns: (auto, auto, auto),
     align: (center + bottom, center + top, center + bottom),
     text(fill: colName, t1),
     [~~|~~],
-    text(size: subtitle-size, weight: "semibold")[#text(fill: colSub, t2.split().at(0)) #t2.split().at(1)])
+    if split {
+    text(size: subtitle-size, weight: "semibold")[#text(fill: colSub, t2.split().at(0)) #t2.split().at(1)]
+    } else {
+      text(size: subtitle-size, weight: "semibold")[#t2]
+    }
+  )
 }
 
 #let referee(ref) = {
@@ -126,8 +139,9 @@
     paper: "us-letter",
     margin: (top: 1.2cm, bottom: 1cm, rest: 1.2cm),
   )
+  #set columns(gutter: 20pt)
 
-  #set par(justify: true, first-line-indent: 2em, leading: 0.6em)
+  #set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.6em)
   #set text(font:fontMain, fill: colMain, size: base-size, weight: 500)
   #set strong(delta: 150)
   #show strong: it => {
@@ -145,3 +159,27 @@
     doc
   )
 ]
+
+#let listPapers(sequence: none) = {
+  if sequence == none {
+    sequence = ()
+    for (k, v) in papers.pairs() {
+      if v.keys().contains("url") {
+        sequence.push(k)
+      }
+    }
+  }
+  for (count, k) in sequence.enumerate() [
+    #let v = papers.at(k)
+    #figure(
+      kind: raw, 
+      supplement: none,
+      grid(
+        columns: (15pt, 1fr),
+        align: left+top,
+        [#(count+1).~],
+        [#authorise(v.author).~ #eval(v.title, mode:"markup")\.~~#text(fill: colAcc, weight: "semibold", if v.keys().contains("url"){link(v.url)[#v.display]} else {[#v.display]}) (#v.date)]
+      )
+    )#label(k)
+  ]
+}

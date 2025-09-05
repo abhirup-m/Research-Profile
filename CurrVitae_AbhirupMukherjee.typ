@@ -1,11 +1,13 @@
-#import "settings.typ": *
+#import "src/settings.typ": *
 
 #show: style.with(
   // base-size: 11pt,
 )
 #cvTitle(details.name, details.position)
-#text(size: imp-size, weight: "semibold", details.affiliation)
-#v(-0.4em)
+
+#v(-1em)
+#h(-2em)#text(size: imp-size, weight: "semibold", details.affiliation)
+
 #header(details)
 
 #cvSection("Research Experience")
