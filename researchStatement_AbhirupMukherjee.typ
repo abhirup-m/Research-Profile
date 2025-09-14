@@ -8,7 +8,7 @@
 #header(details)
 #line(length: 100%)
 
-#let name = "resStateTexts/princeton.typ"
+#let name = "resStateTexts/knolle.typ"
 #import(name):*
 #include(name)
 

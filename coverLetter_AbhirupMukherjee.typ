@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/princeton.typ": *
+#import "coverLetterTexts/general.typ": *
 
 #show: style.with(
 )
@@ -27,7 +27,6 @@
   columns(2, coverLett(paperLinks(papers)))
 )
 
-#set par(first-line-indent: 0em)
 #align(right, [
 Sincerely,\
 *ABHIRUP MUKHERJEE*

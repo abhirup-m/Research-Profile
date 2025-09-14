@@ -6,7 +6,7 @@
 #cvTitle(details.name, details.position)
 
 #v(-1em)
-#h(-2em)#text(size: imp-size, weight: "semibold", details.affiliation)
+#text(size: imp-size, weight: "semibold", details.affiliation)
 
 #header(details)
 
