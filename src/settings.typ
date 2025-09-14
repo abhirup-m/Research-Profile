@@ -141,7 +141,7 @@
   )
   #set columns(gutter: 20pt)
 
-  #set par(justify: true, first-line-indent: (amount: 2em, all: true), leading: 0.6em)
+  #set par(justify: true, first-line-indent: (amount: 0em, all: true), leading: 0.6em)
   #set text(font:fontMain, fill: colMain, size: base-size, weight: 500)
   #set strong(delta: 150)
   #show strong: it => {

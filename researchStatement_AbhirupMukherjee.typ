@@ -8,8 +8,9 @@
 #header(details)
 #line(length: 100%)
 
-#import("resStateTexts/general.typ"):*
-#include("resStateTexts/caltech.typ")
+#let name = "resStateTexts/princeton.typ"
+#import(name):*
+#include(name)
 
 = References
 #listPapers(sequence: sequence)

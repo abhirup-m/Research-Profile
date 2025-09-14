@@ -1,10 +1,8 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/coverLettGeneral.typ": *
+#import "coverLetterTexts/princeton.typ": *
 
 #show: style.with(
-  numCols: 2,
 )
-
 
 #place(
   top,
@@ -25,10 +23,12 @@
   #line(length:100%)]
 )
 
-#coverLett(paperLinks(papers))
+#balance(
+  columns(2, coverLett(paperLinks(papers)))
+)
 
 #set par(first-line-indent: 0em)
 #align(right, [
 Sincerely,\
-Abhirup Mukherjee
+*ABHIRUP MUKHERJEE*
 ])
