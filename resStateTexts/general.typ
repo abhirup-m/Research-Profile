@@ -89,18 +89,25 @@ The shape of the acoustic pulses tracks the various steps of the magnetic crosso
 ]
 ))
 
-= Short-term future directions
+= Short-term research goals
 
-#columns(2,
-[
-- Our work on the Mott transition has some obvious possible extensions. These include studying the effect of doping the impurity site, as well as appying our approach to the heavy-fermion materials.
+*Extending our work on lattice Mott MIT work*. Having obtained exciting results on the 2D Mott MIT (in the form of a momentum-anisotropic Mott metal phase, [@mukherjee2025]), I am interested in extending this to the case of non-zero doping. This should unlock several new possibilities such as superconducting instabilities. Another avenue for extendin this is to tackle the problem of heavy-fermions and study the Fermi surface reconstruction transition in such materials from the lens of Kondo breakdown.
 
-- In terms of investigating non-Fermi liquid physics arising from Kondo breakdown, we are presently investigating a variety of impurity models to construct a *overarching theory for partially-screened models* and the associated low-energy signatures, using several diagnostics.
-#colbreak()
+*Overarching theory for Kondo-frustrated non-Fermi liquids*. In terms of investigating non-Fermi liquid physics arising from Kondo breakdown, we are presently studying a variety of impurity models to construct a unified theory of the low-energy signatures, using several diagnostics. These signatures include real-space entanglement measures, degree of compensation, etc.
 
-- With regards to the entanglement renormalisation aspect, it should be interesting to check how the entanglement scaling plays out for Lifshitz fermions $E\(k\) prop k^alpha$, $alpha > 1$. Once can also try to model the effects of electronic correlation perturbatively or by using an exactly solvable model such as the Hatsugai-Kohmoto model and studying how it affects properties of the holographic dimension.
-])
+*Holographic lifshitz theories*. With regards to my entanglement renormalisation work (where we showed that scaling transformations in a non-interacting 2D Dirac theory can be visualised as the emergence of a holographic dimension, [@Mukherjee2024]), it should be interesting to check how the entanglement scaling plays out for Lifshitz fermions $E\(k\) prop k^alpha$, $alpha > 1$. Once can also try to model the effects of electronic correlation perturbatively or by using an exactly solvable model such as the Hatsugai-Kohmoto model and studying how it affects properties of the holographic dimension.
 
+*Investigating many-body scars in Hatsugai-Kohmoto model*. Having invesigated some apects in one my currently-running projecs, I am interested in studying similar ideas in the Hatsugai-Kohmoyo model $H_"KM"$. $H_"KM"$ is an exactly solvable, integrable model of correlated electrons, displaying non-Fermi liquid excitations. Following *PRL 134 050403*, it is worth investigating whether a perturbatively non-integrable model (such as $H = H_"KM" + P_nu H_"Hub" P_nu$, where $H_"Hub"$ is the Hubbard model and $P_nu$ projects onto some symmetry sectors) can host many-body scars (through approximate symmetries remnant from $H_"KM"$). The entanglement structure of the states in such a model should also be interesting to explore.
+ 
+*Effect of correlated impurities on dynamics of integrable systems*. Taking arXiv:2503.14608 forward, one can study the effect of correlated impurities on the revival of ergodicity in integrable models, in the form of quantum impurity models. More specifically, one can consider various geometries of impurities which are known to host non-Fermi liquid excitations, and study the dependence of thermalisation on the nature of excitations.
+
+*Entanglement patterns in interacting Majorana fermions*. By adopting and extending the method laid out in #link("https://journals.aps.org/prb/pdf/10.1103/f4b4-h1yr")[PRB 112, 024440 (2025)], one can study entanglement measures in interacting Majorana fermions. Entanglement has become a key tool in the fast few decades in characterising phases of quantum matter, providing insights into the nature of correlations (are the correlations multi-partite?) within a phase. An entanglement _witness_ like the quantum Fisher information can certainly be related to the dynamical susceptibility, making it a tempting candidate for investigation. Entanglement _measures_ can also often be linked to static correlations and therefore may also be amenable to this approach.
+
+*Studying effect of electronic correlations in MATBG through an exactly solvable model*. The Hatsugai-Kohmoto model is an exactly solvable model of correlated electrons, displaying non-Fermi liquid and Mott insulating phases. It should be interesting to see what kind of phases emerge in an MATBG system with such interactions. Instabilities towards non-BCS superconductivity can also be explored and compared against experiments.
+
+*Exploring violation of Luttinger's theorem in heavy-fermion systems*. Recent work (arXiv:2506.04342) suggests that violation of Luttinger's theorem (in non-Fermi liquids and Mott insulators) are a result of changes in the anomaly structure of the Fermi surface. One can investigate these claims particularly in the context of heavy-fermion systems to see if we can write down topological order parameters (derived from singularities in the Luttinger-Ward functional, following arXiv:2506.04342) that track phase transitions in such systems.
+
+*Extend the idea of ’t Hooft anomalies to Mott insulators*. Some work has already been done in this regard in a recent series of works by Philip Phillips (arXiv:2506.04342). Can we write down something akin to topological order parameters derived from changes in anomaly structures that can classify these phases? One can also consider the question of correlating anomalies to entanglement patterns.
 
 = Long-term research goals
 
