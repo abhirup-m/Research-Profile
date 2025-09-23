@@ -1,10 +1,12 @@
 #import "../src/settings.typ": *
 #let sequence = ("Mukherjee2023", "mukherjee2025", "Mukherjee2022", "Patra_2023", "Aashish2024", "Mukherjee2024", "Anjan2025")
 
-#balance(columns( 2,[
+#balance(columns(2, [
   I am a quantum condensed matter theorist focusing primarily on characterising phases of strongly correlated *quantum matter* - novel states that appear at zero temperature and display emergent exotic properties, often driven by strong interactions between the constituent particles. Such phases are interesting because they cannot be organised according to the paradigm of spontaneous symmetry breaking and local order parameters. Instead, phase transitions involving such phases often involve changes in *topology*.
 
   My work presently focuses on understanding various features of Mott metal-insulator transitions from the perspective of *Kondo breakdown*. Impurity models involving destruction of Kondo screening often display quantum criticality, non-Fermi liquid physics and pseudogapped phases. This has allowed us to propose simple impurity models that are able to capture and understand crucial features of Mott transitions.
+
+A major thrust of my work has been towards trying to understand Mott transitions through the confluence of two main ideas - Kondo breakdown, and changes in entanglement patterns.   This resonates well with the work of *Prof. Dominic Else* at Perimeter, who investigates non-perturbative topological properties of quantum liquids. I believe this conceptual overlap opens exciting opportunities for fresh collaborative research in the field of quantum matter, focusing on non-Fermi liquids.
 ]))
 
 = Kondo breakdown as route to understanding Mott transitions [@Mukherjee2023, @mukherjee2025]
