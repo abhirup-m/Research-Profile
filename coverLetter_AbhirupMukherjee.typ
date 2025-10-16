@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/general.typ": *
+#import "coverLetterTexts/sds.typ": *
 
 #show: style.with(
 )

@@ -6,7 +6,7 @@
 
   My work presently focuses on understanding various features of Mott metal-insulator transitions from the perspective of *Kondo breakdown*. Impurity models involving destruction of Kondo screening often display quantum criticality, non-Fermi liquid physics and pseudogapped phases. This has allowed us to propose simple impurity models that are able to capture and understand crucial features of Mott transitions.
 
-A major thrust of my work has been towards trying to understand Mott transitions through the confluence of two main ideas - Kondo breakdown, and changes in entanglement patterns.   This resonates well with the work of *Prof. Dominic Else* at Perimeter, who investigates non-perturbative topological properties of quantum liquids. I believe this conceptual overlap opens exciting opportunities for fresh collaborative research in the field of quantum matter, focusing on non-Fermi liquids.
+A major thrust of my work has been towards trying to understand Mott transitions through the confluence of two major ideas - Kondo breakdown, and changes in entanglement patterns. This opens up exciting possibilities for working with the Condensed Matter Theory Center at the University of Maryland. For example, there is strong overlap of my work with the research carried out by *Prof. Sankar Das Sarma* on magic-angle twisted bilayer graphene (from a heavy fermions perspective) and the integer quantum hall effect. More details on specific ways of building on this research have been provided below.
 ]))
 
 = Kondo breakdown as route to understanding Mott transitions [@Mukherjee2023, @mukherjee2025]
@@ -93,21 +93,14 @@ The shape of the acoustic pulses tracks the various steps of the magnetic crosso
 
 = Short-term research goals
 
+In addition to extending my current work on Mott physics and Kondo breakdown, I envision several projects that overlap with ongoing research of *Prof. Sankar Das Sarma* at the University of Maryland. Given my experience with correlated electronic systems, I am particularly interested in extending some of his recent works on magic-angle twisted bilayer graphene and the integer quantum hall effect.
 #balance(
   columns(2, [
-*Extending our work on lattice Mott MIT work*. Having obtained exciting results on the 2D Mott MIT (in the form of a momentum-anisotropic Mott metal phase, [@mukherjee2025]), I am interested in extending this to the case of non-zero doping. This should unlock several new possibilities such as superconducting instabilities. Another avenue for extendin this is to tackle the problem of heavy-fermions and study the Fermi surface reconstruction transition in such materials from the lens of Kondo breakdown.
-
-*Overarching theory for Kondo-frustrated non-Fermi liquids*. In terms of investigating non-Fermi liquid physics arising from Kondo breakdown, we are presently studying a variety of impurity models to construct a unified theory of the low-energy signatures, using several diagnostics. These signatures include real-space entanglement measures, degree of compensation, etc.
-
-*Holographic lifshitz theories*. With regards to my entanglement renormalisation work (where we showed that scaling transformations in a non-interacting 2D Dirac theory can be visualised as the emergence of a holographic dimension, [@Mukherjee2024]), it should be interesting to check how the entanglement scaling plays out for Lifshitz fermions $E\(k\) prop k^alpha$, $alpha > 1$.
-
-*Many-body scars in an exactly solvable model*. Having invesigated some apects of eigenstate thermalisation in one my current projecs, I am interested in studying similar ideas in the Hatsugai-Kohmoyo model $H_"KM"$, an exactly solvable model of correlated electrons, displaying non-Fermi liquid excitations. For example, it might be worth investigating whether a perturbatively non-integrable model (such as $H = H_"KM" + P_nu H_"Hub" P_nu$, where $H_"Hub"$ is the Hubbard model and $P_nu$ projects onto some symmetry sectors) can host many-body scars (through an approximate integrability left over from $H_"KM"$). The entanglement structure of the states in such a model should also be interesting to explore.
- 
-*Effect of correlated impurities on dynamics of integrable systems*. Continuing with the theme of thermalisation, I am interested in studying the effect of correlated impurities on the revival of ergodicity in integrable models. More specifically, one can consider quantum impurity models with varying geometries (which are known to host non-Fermi liquid excitations), and study the dependence of thermalisation on the nature of excitations.
-
-*Studying effect of electronic correlations in MATBG through an exactly solvable model*. As mentioned in a previous point, the Hatsugai-Kohmoto model is an exactly solvable model of correlated electrons, displaying non-Fermi liquid and Mott insulating phases. This therefore provides an interesting route to studying the emergence of novel phases in a correlated MATBG system. Instabilities towards non-BCS superconductivity can also be explored and compared against experiments.
+*Studying effect of electronic correlations in MATBG through an exactly solvable model*. The Hatsugai-Kohmoto model is an exactly solvable model of correlated electrons, displaying non-Fermi liquid and Mott insulating phases. This therefore provides an interesting route to studying the emergence of novel phases in a correlated MATBG system. Instabilities towards non-BCS superconductivity can also be explored and compared against experiments.
 
 *Exploring violation of Luttinger's theorem in heavy-fermion systems*. A growing body of recent literature suggests that violation of Luttinger's theorem (in non-Fermi liquids and Mott insulators) are a result of changes in the anomaly structure of the Fermi surface. One can investigate these claims particularly in the context of heavy-fermion systems to see if we can write down topological order parameters (derived from singularities in the Luttinger-Ward functional) that track phase transitions in such systems. One can also consider the question of correlating such anomalies to entanglement patterns.
+
+*Entanglement as probe of integer quantum hall transitions*. The integer quantum Hall plateau-to-plateau transition involves the system passing through a gapless phase in between two gapped phases. We know that entanglement measures change qualititaively when a system changes from a gapless state to a gapped state. This suggests the possibility of tracking the IQHE transition through entanglement measures. Additionally, one can check the dependence of such measures on temperature and disorder strength.
 ]))
 
 = Long-term research goals
