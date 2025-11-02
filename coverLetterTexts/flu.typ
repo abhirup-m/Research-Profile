@@ -1,0 +1,13 @@
+#let coverLett(papers) = [
+I am a final-year Ph.D. candidate in Physics at IISER Kolkata, working under *Prof. Siddhartha Lal*. I expect to complete my degree by early 2026 and would be available to join as a postdoctoral researcher from *February 2026*. My doctoral research focuses on *strongly correlated quantum matter*, in particular understanding Mott metal–insulator transitions and the emergence of non-Fermi liquid phases through the lens of *Kondo breakdown*.
+
+My doctoral research work spans a number of themes, more details of which can be found in my research statement. The main thrust of my work has been towards capturing various features (non-Fermi liquids and pseudogapping) of Mott transitions through *Kondo breakdown*. I have also worked on entanglement renormalization in free fermion systems and collaborated with experimentalists on lattice spin–phonon interactions in CrSiTe₃. These projects, described in detail in my research statement, reflect my (i) theoretical breadth, (ii) willingness to work on a variety of problems, and (iii) collaborative approach.
+
+I am working on several other projects which I plan to complete before joining for a postdoc. These include (i) studying quantum criticality in a model of *heavy-fermions*, from the perspective of Kondo breakdown, and (ii) looking for punctured-Chern invariant in *integer quantum hall* transitions.
+
+Looking ahead, I aim to build on this by investigating universal aspects of quantum criticality, particularly developing a unifying framework for fermionic criticality. Much of my work has overlap with the work carried out at FSU. I am particularly interested in the research on heavy-fermion systems and topological systems by *Prof. Oskar Vafek*. Given the opportunity, I would be excited to extend the topological heavy-fermions (THF) approach to calculate measures of entanglement, as well as apply it to moiré bands in twisted transition metal dichalcogenides. More details about these ideas can be found in my research statement.
+
+I am eager to tackle a *wide range of problems* and collaborate with experimentalists. I bring strong experience and expertise in both analytical and numerical approaches to many-body problems. I believe that my ability to *quickly learn new methods* and adapt and apply them to various systems makes me particularly suitable for this position.
+
+Enclosed are my curriculum vitae, research statement, and list of publications. I would be glad to provide further information upon request. Thank you for your time and consideration. I look forward to the possibility of contributing to the exciting research at your university.
+]

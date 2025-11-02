@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/pepin.typ": *
+#import "coverLetterTexts/flu.typ": *
 
 #show: style.with(
 )

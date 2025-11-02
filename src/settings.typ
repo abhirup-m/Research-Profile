@@ -1,5 +1,6 @@
 #import "@preview/fontawesome:0.6.0": *
 #let fontBig = "Hero New"
+// #let fontMain = "Libertinus Sans"
 #let fontMain = "Libertinus Serif"
 #let title-size = 22pt
 #let subtitle-size = 18pt
@@ -142,7 +143,7 @@
   #set columns(gutter: 20pt)
 
   #set par(justify: true, first-line-indent: (amount: 0em, all: true), leading: 0.6em)
-  #set text(font:fontMain, fill: colMain, size: base-size, weight: 500)
+  #set text(font:fontMain, fill: colMain, size: base-size, weight: "regular")
   #set strong(delta: 150)
   #show strong: it => {
       text(fill: colBold, weight: "bold", it.body)
