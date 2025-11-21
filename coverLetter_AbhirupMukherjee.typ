@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/flu.typ": *
+#import "coverLetterTexts/UIUC.typ": *
 
 #show: style.with(
 )

@@ -8,9 +8,11 @@
 #header(details)
 #line(length: 100%)
 
-#let name = "resStateTexts/flu.typ"
+#let name = "resStateTexts/episteme.typ"
 #import(name):*
 #include(name)
 
-= References
-#listPapers(sequence: sequence)
+#if sequence.len() > 0 [
+  = References
+  #listPapers(sequence: sequence)
+]
