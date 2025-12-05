@@ -8,7 +8,7 @@
 #header(details)
 #line(length: 100%)
 
-#let name = "resStateTexts/episteme.typ"
+#let name = "resStateTexts/hanyang.typ"
 #import(name):*
 #include(name)
 

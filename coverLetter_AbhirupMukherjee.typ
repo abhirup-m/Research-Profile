@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/UIUC.typ": *
+#import "coverLetterTexts/hanyang.typ": *
 
 #show: style.with(
 )

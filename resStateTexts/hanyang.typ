@@ -5,6 +5,8 @@
   I am a quantum condensed matter theorist focusing primarily on characterising phases of strongly correlated *quantum matter* - novel states that appear at zero temperature and display emergent exotic properties, often driven by strong interactions between the constituent particles. Such phases are interesting because they cannot be organised according to the paradigm of spontaneous symmetry breaking and local order parameters. Instead, phase transitions involving such phases often involve changes in *topology*.
 
   My work presently focuses on understanding various features of Mott metal-insulator transitions from the perspective of *Kondo breakdown*. Impurity models involving destruction of Kondo screening often display quantum criticality, non-Fermi liquid physics and pseudogapped phases. This has allowed us to propose simple impurity models that are able to capture and understand crucial features of Mott transitions.
+
+Among the faculty members, I have been closely following the work of *Prof. Moon Jip Park* and *Prof. Pilkyung Moon* on topological phases and bilayer graphene. This is owing to my own experience with topological phase transitions and bilayer heavy-fermion models, and I believe this overlap in our research directions can lead to meaningful collaboration. Going by the kind of research I have carried out during my PhD, I envision several interesting lines of research that I have described in more detail #link(<short>)[below].
 ]))
 
 = Kondo breakdown as route to understanding Mott transitions [@Mukherjee2023, @mukherjee2025]
@@ -33,7 +35,8 @@ We then applied our approach to the case of two dimensions, in order to address 
 )
 
 = Engineering non-Fermi liquids from critical impurity models [@Mukherjee2022 - @Aashish2024]
-#columns(2, [
+#balance(
+columns(2, [
 Another aspect of my work that is closely allied with the previous theme is the study of non-Fermi liquid phases emerging from quantum impurity models. This is relevant because non-Fermi liquids often arise in correlated materials, particularly in the proximity of quantum phase transitions. This makes characterisation of such non-Fermi liquids crucial.
 
 == Emergence of non-Fermi liquids
@@ -41,10 +44,10 @@ In [@Mukherjee2022], we investigated the *single-channel Kondo model* and demons
 
 We next turned our focus to the *multichannel Kondo problem* that displays breakdown of Kondo screening, and shed light on the role played by the *ground state degeneracy* in the non-Fermi liquid physics - how it leads to an orthogonality catastrophe in the low-energy excitations and how it modified the various correlations into anomalous forms [@Patra_2023]. This work also emphasized the importance of using *simpler models* (the star graph in this case) to capture the essential physics.
 
-#colbreak()
 == Quantum critical lattice models
 We next wanted to use our approach to investigate the *exotic critical point* demonstrated in some recent works (Phys. Rev. B 93 155136 (2016), Phys. Rev. B 107 205104 (2023)) within a three-orbital lattice model. We have showed ([@Aashish2024]) that a single $f-$impurity hybridising with two independent conduction baths leads (@Fig2) to similar quantum critical phases with non-Fermi liquid excitations and pseudogapped spectral functions. This is in contrast to the isolated critical points that appear in other impurity models and that require fine-tuning of parameters.
 
+]))
 #figure(
     kind: image,
     placement: top,
@@ -59,7 +62,6 @@ We next wanted to use our approach to investigate the *exotic critical point* de
     )
 )<Fig2>
 
-])
 
 = Bulk-boundary correspondence \& entanglement renormalisation [@Mukherjee2024]
 #grid(
@@ -89,27 +91,20 @@ The shape of the acoustic pulses tracks the various steps of the magnetic crosso
 ]
 ))
 
-= Short-term research goals
+= Future Collaborative Projects<short>
 
 #balance(
   columns(2, [
-*Extending our work on lattice Mott MIT work*. Having obtained exciting results on the 2D Mott MIT (in the form of a momentum-anisotropic Mott metal phase, [@mukherjee2025]), I am interested in extending this to the case of non-zero doping. This should unlock several new possibilities such as superconducting instabilities. Another avenue for extendin this is to tackle the problem of heavy-fermions and study the Fermi surface reconstruction transition in such materials from the lens of Kondo breakdown.
-
-*Overarching theory for Kondo-frustrated non-Fermi liquids*. In terms of investigating non-Fermi liquid physics arising from Kondo breakdown, we are presently studying a variety of impurity models to construct a unified theory of the low-energy signatures, using several diagnostics. These signatures include real-space entanglement measures, degree of compensation, etc.
-
-*Holographic lifshitz theories*. With regards to my entanglement renormalisation work (where we showed that scaling transformations in a non-interacting 2D Dirac theory can be visualised as the emergence of a holographic dimension, [@Mukherjee2024]), it should be interesting to check how the entanglement scaling plays out for Lifshitz fermions $E\(k\) prop k^alpha$, $alpha > 1$.
-
-*Many-body scars in an exactly solvable model*. Having invesigated some apects of eigenstate thermalisation in one my current projecs, I am interested in studying similar ideas in the Hatsugai-Kohmoyo model $H_"KM"$, an exactly solvable model of correlated electrons, displaying non-Fermi liquid excitations. For example, it might be worth investigating whether a perturbatively non-integrable model (such as $H = H_"KM" + P_nu H_"Hub" P_nu$, where $H_"Hub"$ is the Hubbard model and $P_nu$ projects onto some symmetry sectors) can host many-body scars (through an approximate integrability left over from $H_"KM"$). The entanglement structure of the states in such a model should also be interesting to explore.
- 
-*Effect of correlated impurities on dynamics of integrable systems*. Continuing with the theme of thermalisation, I am interested in studying the effect of correlated impurities on the revival of ergodicity in integrable models. More specifically, one can consider quantum impurity models with varying geometries (which are known to host non-Fermi liquid excitations), and study the dependence of thermalisation on the nature of excitations.
+    As I have mentioned in the introduction, there is considerable overlap between my research and the work of *Prof. Moon Jip Park* and *Prof. Pilkyung Moon*. I now describe fresh ideas for projects that can lead to interesting collaborations:
 
 *Studying effect of electronic correlations in MATBG through a bilayer impurity model*. One of the ongoing directions of research in the field of magic-angle TBG is via the topological heavy-fermions approach put forward by Prof. Bernevig (among others). Given my experience with correlated quantum impurity models, it may be fruitful to look at an impurity model analogue of such a THF model by allowing a Kondo impurity to hybridise with a topologically non-trivial conduction bath. This can allow us to study various interesting phases within a simplified paradigm.
+
+*Fate of topological phases in the presence of interactions*. The Hatsugai-Kohmoto model is an exactly-solvable model of correlated electrons, and contains non-Fermi liquid and Mott insulating phases. It might be interesting to introduce such interactions within a model of topological insulator (such as the SSH model), and verify whether the topological features survive. The possiblity of obtaining analytical insights makes this project potentially very fruitful.
 
 *Studying effect of electronic correlations in MATBG through an exactly solvable model*. As mentioned in a previous point, the Hatsugai-Kohmoto model is an exactly solvable model of correlated electrons, displaying non-Fermi liquid and Mott insulating phases. This therefore provides an interesting route to studying the emergence of novel phases in a correlated MATBG system. Instabilities towards non-BCS superconductivity can also be explored and compared against experiments.
 
 *Exploring violation of Luttinger's theorem in heavy-fermion systems*. A growing body of recent literature suggests that violation of Luttinger's theorem (in non-Fermi liquids and Mott insulators) are a result of changes in the anomaly structure of the Fermi surface. One can investigate these claims particularly in the context of heavy-fermion systems to see if we can write down topological order parameters (derived from singularities in the Luttinger-Ward functional) that track phase transitions in such systems. One can also consider the question of correlating such anomalies to entanglement patterns.
 
-*Fate of topological phases in the presence of interactions*. The Hatsugai-Kohmoto model is an exactly-solvable model of correlated electrons, and contains non-Fermi liquid and Mott insulating phases. It might be interesting to introduce such interactions within a model of topological insulator (such as the SSH model), and verify whether the topological features survive. The possiblity of obtaining analytical insights makes this project potentially very fruitful.
 ]))
 
 = Long-term research goals
