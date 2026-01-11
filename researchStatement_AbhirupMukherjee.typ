@@ -8,11 +8,11 @@
 #header(details)
 #line(length: 100%)
 
-#let name = "resStateTexts/hanyang.typ"
+#let name = "resStateTexts/taiwanIOP.typ"
 #import(name):*
 #include(name)
 
 #if sequence.len() > 0 [
   = References
-  #listPapers(sequence: sequence)
+  #listPapers(sequence: sequence, noName: true)
 ]

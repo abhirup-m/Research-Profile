@@ -161,7 +161,7 @@
   )
 ]
 
-#let listPapers(sequence: none) = {
+#let listPapers(sequence: none, noName: false) = {
   if sequence == none {
     sequence = ()
     for (k, v) in papers.pairs() {
@@ -179,7 +179,7 @@
         columns: (15pt, 1fr),
         align: left+top,
         [#(count+1).~],
-        [#authorise(v.author).~ #eval(v.title, mode:"markup")\.~~#text(fill: colAcc, weight: "semibold", if v.keys().contains("url"){link(v.url)[#v.display]} else {[#v.display]}) (#v.date)]
+        [#authorise(v.author).~ #if noName == false { eval(v.title, mode:"markup")[\.] }~~#text(fill: colAcc, weight: "semibold", if v.keys().contains("url"){link(v.url)[#v.display]} else {[#v.display]}) (#v.date)]
       )
     )#label(k)
   ]
