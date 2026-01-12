@@ -89,8 +89,11 @@ The shape of the acoustic pulses tracks the various steps of the magnetic crosso
 ]
 ))
 
-= Short-term research goals
+= Research Interests
 
+As is clear from the preceding sections, my primary research interest lies in understanding Mott transitions and correlation-driven metal–insulator transitions in low-dimensional quantum materials, particularly through the lens of Kondo breakdown. Specific aspects of my interest include emergent non-Fermi liquid phases, orbital/band-selective transitions, and Fermi surface topology changes, in the context of various materials and models. Other topics that I am interested in and look forward to working on in the future include high-$T_c$ superconductivity and various topological phases.
+
+Below I list more concrete ideas for potential projects.
 #balance(
   columns(2, [
 *Extending our work on lattice Mott MIT work*. Having obtained exciting results on the 2D Mott MIT (in the form of a momentum-anisotropic Mott metal phase, [@mukherjee2025]), I am interested in extending this to the case of non-zero doping. This should unlock several new possibilities such as superconducting instabilities. Another avenue for extendin this is to tackle the problem of heavy-fermions and study the Fermi surface reconstruction transition in such materials from the lens of Kondo breakdown.

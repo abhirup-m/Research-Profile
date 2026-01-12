@@ -1,5 +1,5 @@
 #import "src/settings.typ": *
-#import "coverLetterTexts/taiwanIOP.typ": *
+#import "coverLetterTexts/general.typ": *
 
 #show: style.with(
 )
