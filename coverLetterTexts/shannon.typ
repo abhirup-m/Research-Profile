@@ -1,0 +1,46 @@
+#import "@preview/physica:0.9.7": *
+#let coverLett(papers) = [
+I am a quantum condensed matter theorist, currently completing my Ph.D. in Physics at the Indian Institute of Science Education and Research (IISER) Kolkata under the supervision of *Prof. Siddhartha Lal*. My doctoral research focuses on *strongly correlated quantum matter*, in particular understanding Mott metal–insulator transitions and the emergence of non-Fermi liquid phases. I anticipate that I will be able to join for a postdoctoral position by *late April 2026*. 
+
+Key themes of my research include: 
++ quantum criticality via frustration of Kondo effect
++ changes in Fermi surface topology
++ entanglement-driven transition, and 
++ boundary condition sensitivity and spectral flow.
+I am strongly interested in collaborating with you towards your stated goals of (a) the development of new algorithms for the simulation of quantum matter, as well as, (b) application of concepts from quantum information to quantum materials and (c) studying topological aspects of magnetism.
+I believe I am especially well-placed to tackle these problems because of my experience with (a) *developing a numerical+analytical framework* that uses quantum impurity models to obtain the low-energy physics of correlated lattice models, (b) experience with *entanglement-driven transitions* and using multiple entanglement measures to characterise phases of quantum matter, and (c) experience with correlation-driven *topological phase transitions* in multiple projects. I explain these points in more detail below.
+
+= High-level summary of research
+The majority of my doctoral research work is on capturing various features of electronic correlation-driven Mott transitions in low dimensions, through *Kondo breakdown*. I have also worked on entanglement renormalization in free fermion systems and collaborated with *experimentalists* on lattice spin–phonon interactions in CrSiTe₃.
+
+The *Kondo effect* refers to the low-energy hybridisation of a magnetic impurity with a non-interacting band of electrons, resulting in the successful screening of the impurity and the emergence of a non-magnetic singlet state and low-energy gapless excitations on the impurity. Through *auxiliary model methods* that map the local physics of a lattice model onto the dynamics of an impurity model, a successful Kondo screening is equivalent to the physics of Landau Fermi liquids. This is where my work comes in: by extending the impurity model with competing tendencies, we *frustrate the itineracy of the electrons* and this leads to novel phases such as Mott insulators and non-Fermi liquids. 
+
+By incorporating the effects of the lattice, we have also successfully captured correlation-driven *Lifshitz transitions*--phase transition involving changes in Fermi surface topology. In many of our works, we characterise various phases and the intervening transitions through *entanglement patterns*; different phases display differing range and multipartiteness of entanglement measures. Such approaches become particularly important in the absence of any local order parameter. This also ties into the fourth theme I mentioned above -- sensitivity to boundary conditions. Indeed, in one of my works, we show how a certain function of the entanglement in a metal can be used to calculate the Luttinger's volume of the system--the number of extended states available for *spectral flow*. This leverages the fact that the eigenstates of a metal can sense the boundaries of the system.
+
+= Technical summary of research
+Due to space constraints, I describe two of my projects in more detail.
+== Mott transition and Pseuogap in 2D
+In order to address some of the open questions pertaining to the mysterious *pseudogap* and non-Fermi liquid phases that arise in the *copper-oxide and heavy-fermion materials*, we developed a new auxiliary model framework that uses a manybody version of Bloch's theorem to "periodised"impurity models into lattice models. In _Mukherjee et al 2025_, we applied this framework to an *extended Hubbard model* on the 2D square lattice. We showed that the transition from a Fermi liquid to a symmetry-preserved Mott insulator goes through a quantum critical *Mott metal* phase.
+
+Interestingly, the Mott metal phase is characterised by *non-Fermi liquid excitations* with anomalous self-energy behaviour and long-range spin correlations and entanglement. Two Fermi surface topology-changing *Lifshitz transitions* separate the three phases; the first topology change (Fermi liquid to Mott metal) is marked by the appearance of *Luttinger segments* (regions of Greens function zeros) in between Fermi segments (regions of Greens function poles), while the second (Mott metal to Mott insulator) happens when the Luttinger segments join to form a *connected Luttinger surface* that replaces the connected Fermi surface of the Fermi liquid phase.
+
+== Magnetic dim. crossover in $"CrSiTe"_3$
+I recently collaborated (_Anjan 2025_) with Prof. N Kamaraju's experimental group on a project investigating the two-step *magnetic dimensional crossover* in the van der Waals ferromagnet $"CrSiTe"_3$ using *pump-probe spectroscopy* and strain pulses. The shape of the acoustic pulses tracks the various steps of the magnetic crossover through several signatures, such as a phase reversal of the strain pulse in the ferromagnetic phase, a red-shift (softening) of the high-frequency phonons and a gapping out of the low-frequency phonon modes within the strain pulse. In order to explain these signatures, I (along with Prof. S Lal) came up with a simple model of *phonons interacting with the lattice spin fluctuations*. By treating the spin interactions using mean-field theory, we showed that the interacting model can be understood as a theory of new phonon fields with a modified dispersion.
+
+= Software and Algorithms
+
+- *Created a Julia package for working with interacting fermionic models*: In order to optimise my workflow of working with manybody fermionic systems, I developed and published the Julia package #link("https://github.com/abhirup-m/fermions.jl")[_Fermions_]. _Fermions_ is a Julia toolkit designed for the symbolic creation and analysis of second-quantised Hamiltonians and operators for electronic systems, particularly those involving interacting fermions.
+
+- *Designed an iterative diagonalisation approach for supplement our unitary renormalisation group approach*: In order to study the low-energy theories obtained from our unitary renormalisation group analysis of various impurity models, I designed an iterative diagonalisation algorithm that, in a rough sense, weds NRG with DMRG: it gradually grows the system by expanding the conduction bath that's hybridising with the impurity site, retaining a fixed number of low-energy states at each step.
+
+- *Calculation of reduced density matrices from expectation values*: As part of the iterative diagonalisation approach, I had to come up with a *basis-agnostic* approach to calculate reduced density matrices (RDMs): we express matrix elements of the RDM as expectation values of various transition operators (for eg.,  $braket(1, rho_(12), 2) = c^dagger_1 c_2$); since it is very easy to obtain these operators and states in their rotated form, the RDM can then be constructed by calculating the expectation values in this rotated basis.
+
+= Plans for the future
+My *primary research interest* lies in studying the effects of competing tendencies and frustration in *low-dimensional quantum materials*, particularly through the lens of entanglement and topological features. Other topics that I am interested in and look forward to working on in the future include quantum magnetism, high-$T_c$ superconductivity and various topological phases. I am also deeply interested in developing analytical or numerical methods to tackle such problems.
+
+Below I list general ideas for potential projects. _These projects are only indicative examples of my research interests._
+- *Many-body scars in an exactly solvable model*: Having invesigated some apects of eigenstate thermalisation in one my current projecs, I am interested in studying similar ideas in the Hatsugai-Kohmoyo model, an exactly solvable model of correlated electrons, displaying non-Fermi liquid excitations. For example, it might be worth investigating whether a perturbatively non-integrable model can host many-body scars (through an approximate integrability left over from $H_"KM"$).
+- *Studying effect of electronic correlations in MATBG through a bilayer impurity model*: One of the ongoing directions of research in the field of magic-angle TBG is via the topological heavy-fermions approach. Given my experience with correlated quantum impurity models, it may be fruitful to look at an impurity model analogue of such a THF model by allowing a Kondo impurity to hybridise with a topologically non-trivial conduction bath.
+
+I believe that my ability to quickly *learn and adapt new methods*, both analytical and numerical, make me particularly suitable for this position. Enclosed are my curriculum vitae and some papers. I would be glad to provide further information upon request. Thank you for your time and consideration.
+]

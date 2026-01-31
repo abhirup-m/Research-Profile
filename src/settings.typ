@@ -141,6 +141,7 @@
     margin: (top: 1.2cm, bottom: 1cm, rest: 1.2cm),
   )
   #set columns(gutter: 20pt)
+  #show figure.caption: emph
 
   #set par(justify: true, first-line-indent: (amount: 0em, all: true), leading: 0.6em)
   #set text(font:fontMain, fill: colMain, size: base-size, weight: "regular")
@@ -179,7 +180,7 @@
         columns: (15pt, 1fr),
         align: left+top,
         [#(count+1).~],
-        [#authorise(v.author).~ #if noName == false { eval(v.title, mode:"markup")[\.] }~~#text(fill: colAcc, weight: "semibold", if v.keys().contains("url"){link(v.url)[#v.display]} else {[#v.display]}) (#v.date)]
+        [#authorise(v.author).~ #if noName == false { emph(eval(v.title, mode:"markup")) + [\.] }~~#text(fill: colAcc, weight: "semibold", if v.keys().contains("url"){link(v.url)[#v.display]} else {[#v.display]}) (#v.date)]
       )
     )#label(k)
   ]
